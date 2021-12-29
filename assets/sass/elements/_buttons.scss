@@ -1,0 +1,99 @@
+.btn {
+    @include transition-all;
+    &:disabled {
+        opacity: 1;
+    }
+}
+
+.is-section .is-btn,
+a.is-btn {
+    border: 1px solid;
+    font-size: $font-size-base;
+    font-weight: $font-weight-r;
+    padding: 8px 29px;
+    border-radius: 5px;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    @include transition-all;
+    @include max-mq ($mb) {
+        padding: 10px 18px;
+    }
+    &.btn-icon {
+        > img,
+        > svg,
+        > span {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        > img,
+        > svg {
+            margin-right: 5px;
+            path {
+                @include transition-all;
+            }
+        }
+    }
+    &.btn-large {
+        padding: 5px 29px;
+        font-size: $font-size-large;
+        // @include max-mq ($mb) {
+        //     padding: 10px 35px;
+        // }
+    }
+    &.btn--primary {
+        background-color: $primary-color;
+        border-color: $primary-color;
+        color: $white;
+        .hero-section & {
+            text-transform: uppercase;
+            color: $white;
+            font-size: $font-size-base;
+            @include min-mq ($mac) {
+                padding: 8px 62px;
+            }
+        }
+        &:hover {
+            background-color: $white;
+            color: $primary-color;
+        }
+    }
+    &.btn--secondary {
+        background-color: $secondary-color;
+        border-color: $secondary-color;
+        color: $white;
+        .hero-section & {
+            text-transform: uppercase;
+            color: $white;
+            font-size: $font-size-base;
+        }
+        &.btn-icon {
+            &:hover {
+                svg {
+                    path {
+                        fill: $secondary-color;
+                    }
+                }
+            }
+        }
+        &:hover {
+            background-color: $white;
+            color: $secondary-color;
+        }
+    }
+    &.btn--tertiary {
+        background-color: $tertiary-color;
+        border-color: $tertiary-color;
+        color: $white;
+        .hero-section & {
+            text-transform: uppercase;
+            color: $white;
+            font-size: $font-size-base;
+        }
+        &:hover {
+            background-color: $white;
+            color: $tertiary-color;
+        }
+    }
+}
+
+

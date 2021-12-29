@@ -1,0 +1,125 @@
+
+input[type='text'],
+input[type='email'],
+input[type='url'],
+input[type='password'],
+input[type='search'],
+input[type='number'],
+input[type='tel'],
+input[type='range'],
+input[type='date'],
+input[type='month'],
+input[type='week'],
+input[type='time'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='color'],
+.form-control,
+textarea {
+  background-color: $white;
+  border-radius: 5px;
+  border: 1px solid $white;
+  color: $black;
+  font-size: $font-size-small !important;
+  height: 43px !important;
+  line-height: 1em;
+  margin-bottom: 16px;
+  padding: 5px 18px;
+  vertical-align: middle;
+
+}
+
+textarea {
+  resize: none;
+  padding-left: .6em;
+  width: 100%;
+  height: auto !important;
+}
+
+button,
+input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+  background-color: $white;
+  border: 1px solid $white;
+  border-radius: 5px;
+  font-family: $primary-font;
+  font-size: $font-size-base;
+  line-height: 1.15em;
+  padding: 10px;
+  vertical-align: middle;
+}
+.btn.btn-lg {
+  background-color: $secondary-color;
+  border-color: $secondary-color;
+  font-size: $font-size-base;
+  transition: all .5s;
+  width: 100%;
+  &:hover {
+    background-color: $tertiary-color;
+    border-color: $tertiary-color;
+  }
+  .lp-form-wrapper & {
+    margin-top: 12px;
+    padding: .95rem 1.2rem;
+  }
+}
+
+select {
+  border: 1px solid $white;
+  border-radius: 10px;
+  height: 51px !important;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active:focus, 
+.btn-primary:not(:disabled):not(.disabled):active:focus, 
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: none;
+}
+.btn-primary:not(:disabled):not(.disabled).active, 
+.btn-primary:not(:disabled):not(.disabled):active, 
+.show > .btn-primary.dropdown-toggle {
+    background-color: $secondary-color;
+}
+
+
+/*---- Placeholder ----*/
+::-webkit-input-placeholder {
+  color: $primary-color !important;
+  opacity: 1;
+  font-family: $primary-font;
+}
+\:-moz-placeholder {
+  color: $black !important;
+  opacity: 1;
+  font-family: $primary-font;
+}
+::-moz-placeholder {
+  color: $black !important;
+  opacity: 1;
+  font-family: $primary-font;
+}
+\:-ms-input-placeholder {
+  color: $black !important;
+  opacity: 1;
+  font-family: $primary-font;
+}
+*::-webkit-input-placeholder {
+  color: $black !important;
+  opacity: 1;
+  font-family: $primary-font;
+}
+*:-moz-placeholder {
+  color: $black !important;
+  opacity: 1;
+  font-family: $primary-font;
+}
+*:-ms-input-placeholder {
+  color: $black !important;
+  opacity: 1;
+  font-family: $primary-font;
+}
+
+fieldset {
+    min-width: 0;
+}

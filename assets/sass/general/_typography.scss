@@ -1,0 +1,60 @@
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+body.page-body {
+	h1, 
+	h2, 
+	h3,
+	h4,
+	h5,
+	button,
+	a {
+		font-family: $primary-font !important;
+	}
+	h1 {
+		font-size: $font-size-h1;
+		font-weight: $font-weight-sb;
+		line-height: 1.2;
+		text-transform: none;
+		@include max-mq ($lt) {
+			font-size: $font-size-h1 - 0.5;
+		}
+		@include max-mq ($ls) {
+			font-size: $font-size-h1 - 0.8;
+		}
+		@include max-mq ($tab) {
+			font-size: $font-size-h1 - 0.8;
+		}
+		@include max-mq ($mb - 20) {
+			font-size: $font-size-h1 - 1.5;
+		}
+		@include max-mq ($ip) {
+			font-size: $font-size-h1 - 1.9;
+		}
+		@include max-mq ($ip - 20) {
+			font-size: $font-size-h1 - 2.1;
+		}
+	}
+	h2 {
+		font-family: $primary-font;
+		font-size: $font-size-h2;
+		font-weight: $font-weight-m;
+		line-height: 1.3;
+		text-transform: none;
+		@include max-mq ($lt) {
+			font-size: $font-size-h2 - 0.5;
+		}
+		@include max-mq ($ls) {
+			font-size: $font-size-h2 - 0.8;
+		}
+		@include max-mq ($tab) {
+			font-size: $font-size-h2 - 0.95;
+		}
+		@include max-mq ($mb - 20) {
+			font-size: $font-size-h2 - 1.2;
+		}
+	}
+	// h3 {
+
+	// }
+}

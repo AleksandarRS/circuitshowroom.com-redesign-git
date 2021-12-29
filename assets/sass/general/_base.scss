@@ -1,0 +1,190 @@
+/*General Style*/
+html body.page-body {
+  color: $primary-color;
+  font-family: $primary-font !important;
+  font-size: 16px;
+  line-height: 1.55;
+  p {
+    line-height: 1.55;
+  }
+  p {
+    font-family: $primary-font;
+    font-size: $font-size-base;
+  }
+}
+  
+  /*--------------------------------------------------------------
+  # Elements
+  --------------------------------------------------------------*/
+  blockquote::before,
+  blockquote::after,
+  q::before,
+  q::after {
+    content: '';
+  }
+  
+  blockquote,
+  q {
+    quotes: '' '';
+  }
+  
+  hr {
+    background-color: #ccc;
+    border: 0;
+    height: 1px;
+    margin-bottom: 1em;
+  }
+  
+  img {
+    height: auto; /* Make sure images are scaled correctly. */
+    max-width: 100%; /* Adhere to container width. */
+  }
+  
+  table {
+    margin: 0 0 1em;
+    width: 100%;
+  }
+  
+  a {
+    color: $primary-color;
+    text-decoration: none;
+    &:hover {
+      color: $secondary-color;
+      text-decoration: none;
+    }
+  }
+  
+  
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  section {
+    ul {
+      li {
+        position: relative;
+        padding-left: 28px;
+        padding-bottom: 12px;
+        &:before {
+          align-items: center;
+          border-radius: 2px;
+          color: $white;
+          content: "\f00c";
+          display: flex;
+          font-family: 'Font Awesome\ 5 Free';
+          height: 17px;
+          justify-content: center;
+          left: 0;
+          position: absolute;
+          text-align: center;
+          top: 3px;
+          width: 17px;
+          @extend %main-gradient;
+        }
+      }
+    }
+  }
+.custom-icons {
+    li {
+        padding-bottom: 23px;
+        padding-top: 23px;
+        padding-left: 50px;
+        @include max-mq ($md + 10) {
+          padding-bottom: 10px;
+          padding-top: 10px;
+        }
+        &:before {
+          display: none;
+          content: '';
+        } 
+    }
+    span {
+        display: inline-block;
+        vertical-align: middle;
+        &:first-of-type {
+            align-items: center;
+            border-radius: 5px;
+            bottom: 0;
+            display: flex;
+            height: 40px;
+            justify-content: center;
+            left: 0;
+            margin: auto;
+            padding: 10px;
+            position: absolute;
+            text-align: center;
+            top: 0;
+            width: 40px;
+            @extend %main-gradient;
+        }
+    }
+}
+
+  /*--------------------------------------------------------------
+  # Clearfix
+  --------------------------------------------------------------*/
+  .clearfix::after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: ' ';
+    clear: both;
+    height: 0;
+  }
+  
+  .clearfix {
+    display: block;
+    height: 1%;
+  }
+  
+  /*--------------------------------------------------------------
+  # Media
+  --------------------------------------------------------------*/
+  /* Make sure embeds and iframes fit their containers. */
+  embed,
+  iframe,
+  object {
+    max-width: 100%;
+  }
+  
+  /*--------------------------------------------------------------
+  # Alignment
+  --------------------------------------------------------------*/
+  .text-center,
+  .align-center {
+    text-align: center;
+  }
+  
+  .align-left {
+    text-align: left;
+  }
+  
+  .align-right {
+    text-align: right;
+  }
+  
+  .text-uppercase {
+    text-transform: uppercase;
+  }
+  
+  .alignleft {
+    display: inline;
+    margin-right: 1em;
+  }
+  
+  .alignright {
+    display: inline;
+    margin-left: 1em;
+  }
+  
+  .aligncenter {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .alignvertical {
+    vertical-align: middle;
+  }

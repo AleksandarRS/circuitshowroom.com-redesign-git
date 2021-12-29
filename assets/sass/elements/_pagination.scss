@@ -1,0 +1,46 @@
+.pagination {
+    padding-bottom: 55px;
+    padding-top: 5px;
+    .page-numbers {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 5px;
+        padding: 2px 4px;
+        &:hover {
+            color: $secondary-color;
+        }
+        &.current {
+            color: $secondary-color;
+            text-decoration: underline;
+        }
+    }
+    .page-arrows {
+        border-radius: 50%;
+        border: 1px solid $grey-400;
+        height: 50px;
+        padding: 9px 3px;
+        text-align: center;
+        width: 50px;
+        @include transition-all;
+        &:hover {
+            background-color: $secondary-color;
+            border-color: $secondary-color;
+            svg {
+                path {
+                    fill: $white;
+                }
+            }
+        }
+        svg {
+            path {
+                @include transition-all;
+            }
+        }
+        &.prev {
+            margin-right: 34px;
+        }
+        &.next {
+            margin-left: 34px;
+        }
+    }
+}

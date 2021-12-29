@@ -1,0 +1,40 @@
+/**
+* IMPORTS
+*/
+
+/* 0. RESET CSS */
+//@import 'reset'; !DON'T USE - Parent theme is driving this
+
+/* 1. Config */
+@import "assets/sass/config/fonts";
+@import "assets/sass/config/mixins";
+@import "assets/sass/config/variables";
+
+/* 2. Partials */
+//@import "assets/sass/vendor/bootstrap-grid"; !DON'T USE - Bootstrap is part of parent theme
+
+/* 3. General */
+@import "assets/sass/general/general-extensions";
+@import "assets/sass/general/base";
+@import "assets/sass/general/content";
+@import "assets/sass/general/typography";
+@import "assets/sass/general/sidebar-tpl";
+
+/* 4. Elements */
+@import "assets/sass/elements/buttons";
+@import "assets/sass/elements/social";
+@import "assets/sass/elements/forms";
+@import "assets/sass/elements/links";
+@import "assets/sass/elements/main_menu";
+@import "assets/sass/elements/pagination";
+
+
+
+/* 4. Partials */
+@import "assets/sass/partials/header";
+@import "assets/sass/partials/hero";
+@import "assets/sass/partials/product-items";
+@import "assets/sass/partials/blog-items";
+@import "assets/sass/partials/footer";
+
+/* 5. Plugins */

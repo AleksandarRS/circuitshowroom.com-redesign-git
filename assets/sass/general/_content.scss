@@ -1,0 +1,53 @@
+
+.container {
+    @include min-mq ($boot_bp) {
+        max-width: $container-width;
+    }
+}
+
+.dark-layer {
+    position: relative;
+    @extend %after-clear;
+    &:after {
+        background-color: $primary-color;
+        opacity: 0.8;
+    }
+    > div {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.white-content {
+    * { 
+        color: $white;
+    }
+}
+
+.after-gradient {
+    position: relative;
+    &:after {
+        @extend %after-gradient-light;
+    }
+    > div {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.main-content-wrapper {
+    padding-top: 53px;
+    .inner-page & {
+        padding-top: 233px;
+    }
+}
+
+
+::-moz-selection {
+    background: $tertiary-color;
+    color: $white;
+}
+::selection {
+    background: $tertiary-color;
+    color: $white;
+}

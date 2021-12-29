@@ -1,0 +1,95 @@
+.navbar-brand {
+    &:hover {
+        svg {
+            path {
+                fill: $white !important;
+            }
+        }
+    }
+    svg {
+        path {
+            transition: all .5s;
+        }
+    }
+}
+.header-wrapper {
+    &.navbar {
+        padding: 0;
+    }
+}
+
+.main-top-header {
+    background-color: $white;
+    border-bottom: 1px solid $grey-400;
+    padding: 10px 15px;
+    @include transition-all;
+    .animated-header & {
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+    ul,
+    p,
+    address {
+        margin: 0;
+    }
+    address {
+        > div {
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+            @include min-mq ($mac) {
+                margin-right: 31px;
+            }
+            &:last-of-type {
+                margin-right: 0;
+            }
+            img {
+                margin: 0 10px 0 0;
+            }
+        }
+    }
+}
+.navbar-brand {
+    max-width: 155px;
+    width: 100%;
+    @include transition-all;
+    .animated-header & {
+        max-width: 125px;
+    }
+}
+.main-top-header,
+.main-navigation-menu {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.main-navigation-menu {
+    background-color: transparent;
+    border-bottom: 1px solid transparent;
+    padding-top: 25px;
+    @include transition-all;
+    .animated-header & {
+        background-color: $white;
+        border-color: $grey-400;
+        padding-top: 3px;
+
+    }
+}
+.nav-container {
+    display: flex;
+    display: -webkit-box;
+    justify-content: space-between;
+}
+.menu-header-nav {
+    align-self: flex-end;
+}
+.main-nav.navbar {
+    background-color: rgba($color: $black, $alpha: 0.6) !important;
+    .navbar-nav li a {
+        color: $tertiary-color !important;
+        transition: color .5s;
+        &:hover {
+            color: $white !important;
+        }
+    }
+}

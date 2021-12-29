@@ -1,0 +1,33 @@
+.link {
+    &.link-secondary {
+        color: $secondary-color;
+        &:hover {
+            color: $primary-color;
+        }
+    }
+    &.link-icon-after {
+        > svg,
+        > img,
+        > span {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        > svg,
+        > img {
+            margin-left: 3px;
+            position: relative;
+            top: -2px;
+            @include transition-all;
+        }
+        > span {
+            text-decoration: underline;
+        }
+        &:hover {
+            color: $secondary-color;
+            > svg,
+            > img {
+                margin-left: 7px;
+            }   
+        }
+    }
+}
