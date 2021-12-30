@@ -16,6 +16,20 @@
     }
     a {
         font-size: $font-size-large;
+        @include transition-all;
+        &:hover {
+            color: $secondary-color;
+            svg {
+                path {
+                    fill: $secondary-color;
+                }
+            }
+        }
+        svg {
+            path {
+                @include transition-all;
+            }
+        }
     }
     &:hover {
         .sub-menu {
@@ -43,12 +57,6 @@
     img {
         margin: 0;
     }
-    .nav-link {
-
-    }
-    .nav-link-cart {
-        
-    }
     .cart-product-counter {
         background-color: $tertiary-color;
         border-radius: 50%;
@@ -66,7 +74,10 @@
         width: 14px;
     }
     .sub-menu {
-        background-color: #fff;
+        // padding: 10px 0 0;
+        background-color: $white;
+        border-radius: 5px;
+        box-shadow: 0 5px 10px rgba($color: $black, $alpha: 0.2);
         left: -50px;
         margin: auto;
         opacity: 0;
@@ -74,17 +85,22 @@
         position: absolute;
         right: -50px;
         text-align: center;
+        text-align: left;
         top: 99%;
+        transition: translate(10px, 0);
         visibility: hidden;
         width: 200px;
         z-index: 10;
-        text-align: left;
         > li {
+            
             padding-left: 15px;
             padding-right: 15px;
             border-bottom: 1px solid;
             &:last-of-type {
                 border: none;
+            }
+            a {
+                font-size: $font-size-base;
             }
         }
     }

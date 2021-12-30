@@ -1,7 +1,9 @@
 footer.site-footer {
     position: relative;
     color: $primary-color;
-    overflow: hidden;
+    // overflow: hidden;
+    background-size: cover;
+    background-position: 0 -10px;
     .footer-bg-cover {
         img {
             bottom: 0;
@@ -26,10 +28,20 @@ footer.site-footer {
     }
     .contact {
         color: $primary-color;
+        .entry-content {
+            max-width: 600px;
+            padding-top: 6px;
+        }
     }
-
     h2.title {
         margin-bottom: 0.3em;
+    }
+    .title {
+        img {
+            margin-right: 12px;
+            position: relative;
+            top: -6px;
+        }
     }
     .container {
         margin-bottom: 0;

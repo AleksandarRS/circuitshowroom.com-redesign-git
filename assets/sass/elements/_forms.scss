@@ -20,22 +20,19 @@ textarea {
   border-radius: 5px;
   border: 1px solid $white;
   color: $black;
-  font-size: $font-size-small !important;
-  height: 43px !important;
+  font-family: $primary-font !important;
+  // font-size: $font-size-small !important;
+  height: 51px !important;
   line-height: 1em;
   margin-bottom: 16px;
   padding: 5px 18px;
   vertical-align: middle;
-
+  .qty-number-of-items & {
+    background-color: $grey-100;
+    border-color: $grey-100;
+    margin-bottom: 0;
+  }
 }
-
-textarea {
-  resize: none;
-  padding-left: .6em;
-  width: 100%;
-  height: auto !important;
-}
-
 button,
 input[type='button'],
 input[type='reset'],
@@ -48,7 +45,82 @@ input[type='submit'] {
   line-height: 1.15em;
   padding: 10px;
   vertical-align: middle;
+  .qty-number-of-items & {
+    background-color: $grey-100;
+    border-color: $grey-100;
+    @include transition-all;
+    &:hover {
+      background-color: $secondary-color;
+      border-color: $secondary-color;
+      color: $white;
+    }
+  }
 }
+input[type='button'] {
+  height: 51px;
+}
+input[type='number'] {
+  text-align: center;
+  .qty-number-of-items & {
+    max-width: 76px;
+    width: 100%;
+    text-align: right;
+  }
+}
+
+textarea {
+  resize: none;
+  padding-left: .6em;
+  width: 100%;
+  height: auto !important;
+}
+label {
+  display: block;
+  position: relative;
+  a {
+    color: $secondary-color !important;
+    text-decoration: underline;
+    &:hover {
+      color: $primary-color !important;
+    }
+  }
+  input[type='checkbox'] {
+    opacity: 0;
+    margin-right: 4px;
+    &:checked {
+      + span {
+        background-color: $secondary-color;
+      }
+    }
+    + span {
+      background-color: $white;
+      border: 1px solid $grey-400;
+      display: inline-block;
+      height: 13px;
+      left: 0;
+      position: absolute;
+      top: 10px;
+      width: 13px;
+    }
+  }
+  
+}
+
+select {
+  border-radius: 5px;
+  border: 1px solid $grey-400;
+  display: block;
+  height: 51px;
+  max-width: 500px;
+  padding: 14px;
+  width: 100%;
+}
+// select {
+//   border: 1px solid $white;
+  
+//   
+// }
+
 .btn.btn-lg {
   background-color: $secondary-color;
   border-color: $secondary-color;
@@ -65,11 +137,7 @@ input[type='submit'] {
   }
 }
 
-select {
-  border: 1px solid $white;
-  border-radius: 10px;
-  height: 51px !important;
-}
+
 
 .btn-primary:not(:disabled):not(.disabled).active:focus, 
 .btn-primary:not(:disabled):not(.disabled):active:focus, 

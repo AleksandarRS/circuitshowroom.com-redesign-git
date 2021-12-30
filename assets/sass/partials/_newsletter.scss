@@ -1,0 +1,27 @@
+.footer-newsletter-inner {
+    max-width: 543px;
+    margin-left: auto;
+    padding-top: 14px;
+    .button,
+    .is-btn,
+    input {
+        margin: 0;
+        text-transform: none;
+    }
+    input {
+        &[type="email"] {
+            max-width: 78%;
+            flex: 0 0 78%;
+        }
+        &[type="submit"] {
+            padding: 15px 5px;
+            margin-left: 6px;
+            min-width: 113px;
+        }
+    }
+    
+    .footer-newsletter-main-fields-inner {
+        display: flex;
+        align-items: center;
+    }
+}

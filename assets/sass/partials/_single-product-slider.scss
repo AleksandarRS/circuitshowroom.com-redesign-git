@@ -1,0 +1,11 @@
+.single-product-slider {
+    a.product-slider-item-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: static;
+        > img {
+            padding-top: 30px;
+        }
+    }
+}

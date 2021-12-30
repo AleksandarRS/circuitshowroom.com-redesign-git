@@ -1,0 +1,10 @@
+.product-description-section {
+    padding-bottom: 35px;
+    padding-top: 35px;
+    .product-description-inner {
+        max-width: 80%;
+        @include min-mq ($mac) {
+            max-width: 60%;
+        }
+    }
+}

@@ -1,0 +1,80 @@
+.acc-container {
+    max-width: 1062px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.acc {
+    margin-bottom: 15px;
+}
+
+.acc-head {
+    background-color: $grey-100;
+    cursor: pointer;
+    font-size: 24px;
+    padding-bottom: 25px;
+    padding-top: 27px;
+    position: relative;
+    &.active {
+        background-color: $grey-150;
+        p {
+            color: $secondary-color;
+        }
+        i {
+            transform: rotate(180deg);
+        }
+    }
+    &:hover {
+        p {
+            color: $secondary-color;
+        }
+    }
+    p {
+        font-size: $font-size-xlarge;
+        color: $primary-color;
+        font-weight: $font-weight-r;
+        margin-bottom: 0;
+        @include transition-all;
+    }
+    > i {
+        align-items: center;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        position: absolute;
+        font-size: 1.25em;
+        right: 32px;
+        color: $secondary-color;
+        top: 0;
+    }
+}
+.acc-content {
+    background-color: $grey-150;
+    padding-bottom: 27px;
+    padding-top: 27px;
+    display: none;
+    position: relative;
+    &:after {
+        background-color: $white;
+        content: '';
+        height: 1px;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 97%;
+    }
+    p {
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}
+.acc-head,
+.acc-content {
+    padding-left: 30px;
+    padding-right: 30px;
+}

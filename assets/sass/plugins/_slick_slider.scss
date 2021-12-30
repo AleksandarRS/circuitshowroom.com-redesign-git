@@ -1,57 +1,81 @@
 .slick-slider {
     padding-bottom: 73px;
     margin-bottom: 5px;
+    &.single-product-slider-nav {
+        margin-bottom: 50px;
+        padding-bottom: 0;
+        padding-left: 45px;
+        padding-right: 45px;
+        @include min-mq ($mac) {
+            margin-bottom: 73px;
+            padding-left: 67px;
+            padding-right: 67px;
+        }
+    }
     .slick-arrow {
-        background-color: transparent;
-        position: absolute;
-        bottom: 0;
-        color: $white;
-        height: 44px;
-        width: 44px;
+        background-color: $white;
         border-radius: 50%;
         border: none;
+        bottom: 0;
+        color: $white;
+        cursor: pointer;
+        height: 47px;
+        position: absolute;
+        width: 47px;
+        @include transition-all;
         &:hover {
-            &:after {
-                background-color: $secondary-color;
-                opacity: 1;
+            background-color: $secondary-color;
+            i {
+                color: $white;
             }
         }
-        &:after {
-            background-color: $white;
-            border-radius: 50%;
-            bottom: 0;
-            content: '';
-            display: block;
-            height: 44px;
-            left: 0;
-            opacity: 0.3;
-            position: absolute;
-            right: 0;
-            top: 0;
-            width: 44px;
-            z-index: 0;
-            transition: all .5s;
-        }
         i {
+            color: $secondary-color;
+            font-size: 1.775em;
+            left: 50%;
             position: absolute;
             top: 50%;
-            left: 50%;
             transform: translate(-50%, -50%);
             z-index: 1;
+            z-index: 9;
+            @include transition-all;
         }
-        &.slick-prev {
+        &.slick-prev-nsn {
             left: calc(50% - 60px);
+            .testimonials-slider-wrapper & {
+                left: calc(55% - 60px);
+            }
+            .product-lightbox-single-page & {
+                left: 0;
+            }
         }
-        &.slick-next {
+        &.slick-next-nsn {
             right: calc(50% - 60px);
+            .testimonials-slider-wrapper & {
+                right: calc(45% - 60px);
+            }
+            .product-lightbox-single-page & {
+                right: 0;
+            }
         }
         &.slick-disabled {
             cursor: no-drop;
             &:after {
                 background-color: $tertiary-color;
                 opacity: 1;
-                
             }
         }
+        .product-lightbox-single-page & {
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+    }
+}
+
+.single-product-slider {
+    img {
+        border-radius: 5px;
+        margin: 0 15px;
     }
 }

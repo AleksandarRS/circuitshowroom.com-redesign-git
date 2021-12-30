@@ -1,0 +1,45 @@
+.tab-nav-items {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $grey-400;
+    margin-bottom: 2.8em;
+    padding-bottom: 11px;
+    > li {
+        position: relative;
+        @include just-after;
+        &:after {
+            background-color: transparent;
+            bottom: -15px;
+            height: 5px;
+            @include transition-all;
+        }
+        &.active {
+            &:after {
+                background-color: $secondary-color;
+            }
+            a {
+                color: $secondary-color;
+            }
+        }
+        a {
+            font-size: $font-size-h5;
+        }
+    }
+}
+.tabs {
+    padding-top: 13px;
+}
+.tab-content {
+    position: relative;
+    .video-wrapper {
+        max-width: 1060px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.product-features-section {
+    .product-title {
+        font-size: $font-size-h3 ;
+    }
+}

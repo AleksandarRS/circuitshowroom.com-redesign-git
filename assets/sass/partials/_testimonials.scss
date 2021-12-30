@@ -1,0 +1,100 @@
+.testimonials-section {
+    position: relative;
+    .testimonials-bg-cover {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -9999;
+        img {
+            width: 100%;
+        }
+    }
+}
+.testimonials-section-inner {
+    padding-bottom: 80px;
+    padding-top: 64px;
+    position: relative;
+}   
+.review-slider-section-inner {
+    background-color: $tertiary-color;
+    padding-bottom: 97px;
+    padding-top: 98px;
+    @include max-mq ($sm) {
+        padding-bottom: 34px;
+        padding-top: 59px;
+    }
+    .heading-content {
+        padding-bottom: 19px;
+    }
+}
+.testimonials-slider-wrapper {
+    padding-top: 35px;
+    transform: translate(-10%);
+    width: 112%;
+}
+.review-slider-item {
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 500px;
+    height: 100%;
+    .review-slider-item-inner {
+        background-color: $white;
+        border-radius: 10px;
+        padding: 33px 29px 128px;
+        position: relative;
+        @include max-mq ($mb) {
+            padding-bottom: 75px;
+        }
+    }
+    .review-entry-content {
+        padding-top: 20px;
+        p {
+            line-height: 1.6;
+        }
+    }
+    .review-author-date-wrapper {
+        align-items: center;
+        bottom: 31px;
+        display: flex;
+        position: absolute;
+        justify-content: space-between;
+        width: calc(100% - 58px);
+    }
+    .review-author {
+        display: flex;
+        align-items: center;
+        // .author-image {
+        //     flex: 0 0 40px;
+        //     max-width: 40px;
+        //     img {
+        //         border-radius: 50%;
+        //         display: block;
+        //         width: 100%;
+        //     }
+        // }
+        .author-name {
+            color: $secondary-color;
+            display: inline-block;
+            font-size: $font-size-xlarge + 0.125;
+            font-weight: $font-weight-m;
+            margin-left: 0;
+        }
+        
+    }
+    .date-testimonial {
+        span {
+            color: $grey-400;
+        }
+    }
+}
+.review-stars {
+    display: flex;
+    img {
+        margin-right: 5px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

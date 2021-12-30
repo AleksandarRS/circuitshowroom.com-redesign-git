@@ -29,12 +29,20 @@
 @import "assets/sass/elements/pagination";
 
 
-
 /* 4. Partials */
 @import "assets/sass/partials/header";
 @import "assets/sass/partials/hero";
 @import "assets/sass/partials/product-items";
 @import "assets/sass/partials/blog-items";
+@import "assets/sass/partials/single-product-slider";
+@import "assets/sass/partials/tabs";
+@import "assets/sass/partials/video-style";
+@import "assets/sass/partials/product-description";
+@import "assets/sass/partials/testimonials";
+@import "assets/sass/partials/accordion";
+@import "assets/sass/partials/faq";
+@import "assets/sass/partials/newsletter";
 @import "assets/sass/partials/footer";
 
 /* 5. Plugins */
+@import "assets/sass/plugins/slick_slider";
