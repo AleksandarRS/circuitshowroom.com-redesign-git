@@ -13,77 +13,106 @@ html body.page-body {
   }
 }
   
-  /*--------------------------------------------------------------
-  # Elements
-  --------------------------------------------------------------*/
-  blockquote::before,
-  blockquote::after,
-  q::before,
-  q::after {
-    content: '';
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: '';
+}
+
+strong {
+  font-weight: $font-weight-m;
+}
+
+blockquote,
+q {
+  quotes: '' '';
+  font-family: $primary-font !important;
+  font-size: $font-size-large + 0.0825;
+  font-weight: $font-weight-m;
+  position: relative;
+  padding: 55px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  span {
+    position: relative;
+    z-index: 1;
   }
-  
-  blockquote,
-  q {
-    quotes: '' '';
-  }
-  
-  hr {
-    background-color: #ccc;
-    border: 0;
-    height: 1px;
-    margin-bottom: 1em;
-  }
-  
   img {
-    height: auto; /* Make sure images are scaled correctly. */
-    max-width: 100%; /* Adhere to container width. */
+    position: absolute;
+    top: 0;
+    margin: auto !important;
+    left: 20px;
+    bottom: 0;
+    z-index: 0;
   }
-  
-  table {
-    margin: 0 0 1em;
-    width: 100%;
+}
+
+figure {
+  figcaption {
+    color: $grey-400;
   }
-  
-  a {
-    color: $primary-color;
+}
+
+hr {
+  background-color: #ccc;
+  border: 0;
+  height: 1px;
+  margin-bottom: 1em;
+}
+
+img {
+  height: auto; /* Make sure images are scaled correctly. */
+  max-width: 100%; /* Adhere to container width. */
+}
+
+table {
+  margin: 0 0 1em;
+  width: 100%;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+  &:hover {
+    color: $secondary-color;
     text-decoration: none;
-    &:hover {
-      color: $secondary-color;
-      text-decoration: none;
-    }
   }
+}
 
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+section {
   ul {
-    list-style: none;
-    padding-left: 0;
-  }
-
-  section {
-    ul {
-      li {
-        position: relative;
-        padding-left: 28px;
-        padding-bottom: 12px;
-        &:before {
-          align-items: center;
-          border-radius: 2px;
-          color: $white;
-          content: "\f00c";
-          display: flex;
-          font-family: 'Font Awesome\ 5 Free';
-          height: 17px;
-          justify-content: center;
-          left: 0;
-          position: absolute;
-          text-align: center;
-          top: 3px;
-          width: 17px;
-          @extend %main-gradient;
-        }
+    li {
+      position: relative;
+      padding-left: 28px;
+      padding-bottom: 12px;
+      &:before {
+        align-items: center;
+        border-radius: 2px;
+        color: $white;
+        content: "\f00c";
+        display: flex;
+        font-family: 'Font Awesome\ 5 Free';
+        height: 17px;
+        justify-content: center;
+        left: 0;
+        position: absolute;
+        text-align: center;
+        top: 3px;
+        width: 17px;
+        @extend %main-gradient;
       }
     }
   }
+}
 .custom-icons {
     li {
         padding-bottom: 23px;

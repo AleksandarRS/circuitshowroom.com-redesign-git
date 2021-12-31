@@ -3,6 +3,7 @@
     padding-top: 80px;
     padding-bottom: 80px;
     &.products-items-section-single-page {
+        background-color: $white;
         padding-bottom: 30px;
         padding-top: 0;
     }
@@ -52,10 +53,16 @@
         }
         .increase-icon-wrap {
             position: absolute;
-            right: 0;
+            right: 21px;
             top: 0;
         }
 
+    }
+    .products-item-single-page {
+        .increase-icon-wrap {
+            right: 0;
+            // top: 0;
+        }
     }
     .products-item-featured-inner {
         .increase-icon-wrap {

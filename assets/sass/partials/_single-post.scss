@@ -1,0 +1,27 @@
+.single-page-blog-post {
+    .title {
+        &.main-title {
+            font-size: $font-size-h2;
+            font-weight: $font-weight-m;
+        }
+    }
+    h2 {
+        font-size: $font-size-h2;
+    }
+    h3 {
+        font-size: $font-size-h4;
+        margin-top: 1.8em;
+    }
+
+    
+
+}
+
+.container {
+    .single-page-blog-post {
+        img {
+            margin: 1.4rem 0 0.4rem;
+        }
+    }
+    
+}

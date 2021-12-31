@@ -1,6 +1,37 @@
 .sidebar-tpl-row {
     padding-bottom: 25px;
 }
+.sidebar-cta-product {
+    padding-bottom: 45px;
+    padding-top: 45px;
+    .products-item {
+        margin-left: -35px;
+        width: calc(100% + 35px);
+        @include min-mq ($mac) {
+            margin-left: -68px;
+            width: calc(100% + 68px);
+        }
+        a {
+            position: relative;
+            display: block;
+            &:hover {
+                .products-item-image {
+                    transform: scale(1.05);
+                }
+            }
+        }
+        .increase-icon-wrap {
+            position: absolute;
+            top: 1px;
+            right: 25px;
+        }
+    }
+    .products-item-inner {
+        > a {
+            background-color: $grey-100;
+        }
+    }
+}
 .sidebar-content-sidebar-tpl-inner {
     background-color: $grey-100;
     position: relative;
@@ -74,3 +105,4 @@
         margin-bottom: 1px;
     }
 }
+
