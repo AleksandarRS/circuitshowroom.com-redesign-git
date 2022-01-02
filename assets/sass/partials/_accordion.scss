@@ -9,6 +9,20 @@
     margin-bottom: 15px;
 }
 
+.acc-head,
+.acc-content {
+    padding-left: 30px;
+    padding-right: 30px;
+    @include max-mq ($ip) {
+        padding-left: 15px;
+    }
+}
+.acc-content {
+    @include max-mq ($ip) {
+        padding-right: 15px;
+    }
+}
+
 .acc-head {
     background-color: $grey-100;
     cursor: pointer;
@@ -16,6 +30,15 @@
     padding-bottom: 25px;
     padding-top: 27px;
     position: relative;
+    @include max-mq ($md) {
+        padding-right: 55px;
+        font-size: 20px;
+        padding-bottom: 15px;
+        padding-top: 17px;
+    }
+    @include max-mq ($ip) {
+        padding-right: 35px;
+    }
     &.active {
         background-color: $grey-150;
         p {
@@ -36,6 +59,9 @@
         font-weight: $font-weight-r;
         margin-bottom: 0;
         @include transition-all;
+        @include max-mq ($mb) {
+            line-height: 1.2 !important;
+        }
     }
     > i {
         align-items: center;
@@ -48,6 +74,9 @@
         right: 32px;
         color: $secondary-color;
         top: 0;
+        @include max-mq ($ip) {
+            right: 20px;
+        }
     }
 }
 .acc-content {
@@ -67,14 +96,14 @@
         top: 0;
         width: 97%;
     }
-    p {
+    p:not(.video-button) {
         &:last-of-type {
             margin-bottom: 0;
         }
     }
-}
-.acc-head,
-.acc-content {
-    padding-left: 30px;
-    padding-right: 30px;
+    p.mobile-video-button {
+        &:last-of-type {
+            margin-bottom: auto;
+        }
+    }
 }

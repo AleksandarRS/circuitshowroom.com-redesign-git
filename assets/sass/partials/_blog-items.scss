@@ -8,11 +8,36 @@
     background-color: $grey-100;
     padding-bottom: 56px;
     padding-top: 80px;
+    @include max-mq ($mb) {
+        padding-top: 52px;
+        padding-bottom: 38px;
+    }
     .all-blog-posts-button {
         max-width: 228px;
         width: 100%;
+        @include max-mq ($ip) {
+            max-width: 180px;
+        }
+        @include max-mq ($ip - 30) {
+            max-width: 150px;
+        }
+        @include max-mq ($xs) {
+            max-width: 125px;
+        }
         .is-btn {
             width: 100%;
+        }
+    }
+}
+
+.title-button-wrap {
+    @include max-mq ($mb) {
+        align-items: flex-start;
+        padding-bottom: 10px;
+    }
+    .is-btn {
+        @include max-mq ($mb) {
+            margin-top: 0;
         }
     }
 }
@@ -56,10 +81,12 @@
         }
     }
     .post-item-details-wrapper {
-        // padding: 5px 15px;
         padding: 10px 15px 7px;
         &.post-item-details-wrapper-featured-post {
             padding: 6px 48px 35px;
+            @include max-mq ($lg) {
+                padding: 6px 30px 15px;
+            }
             .post-excerpt,
             .entry-header {
                 padding-top: 19px;
@@ -77,6 +104,16 @@
             padding-top: 15px;
             .post-cat {
                 background-color: $secondary-color;
+                margin-right: 20px;
+                @include min-mq ($mac) {
+                    margin-right: 50px;
+                }
+            }
+            .entry-header {
+                padding-top: 15px;
+            }
+            img {
+                margin-top: 0.4em;
             }
         }
         .post-date-published {
@@ -86,6 +123,11 @@
             background-color: $primary-color;
             color: $white;
             padding: 0 9px 1px;
+            text-align: center;
+            @include max-mq ($ip - 20) {
+                padding-bottom: 2px;
+                padding-top: 3px;
+            }
             span {
                 display: inline-block;
                 line-height: 1;
@@ -95,8 +137,26 @@
     h2,
     .post-title {
         font-size: $font-size-h4;
+		@include max-mq ($ls) {
+			font-size: $font-size-h4 - 0.2;
+		}
+		@include max-mq ($mb - 20) {
+			font-size: $font-size-h4 - 0.5;
+		}
+		@include max-mq ($ip) {
+			font-size: $font-size-h4 - 0.9;
+		}
         .single-page-blog-post & {
             font-size: $font-size-h3 + 0.125;
+            @include max-mq ($ls) {
+                font-size: $font-size-h3 - 0.2;
+            }
+            @include max-mq ($mb - 20) {
+                font-size: $font-size-h3 - 0.5;
+            }
+            @include max-mq ($ip) {
+                font-size: $font-size-h3 - 0.9;
+            }
         }
     }
 }

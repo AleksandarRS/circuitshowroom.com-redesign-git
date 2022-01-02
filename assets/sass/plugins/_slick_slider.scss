@@ -44,6 +44,9 @@
             left: calc(50% - 60px);
             .testimonials-slider-wrapper & {
                 left: calc(55% - 60px);
+                @include max-mq ($sm) {
+                    left: calc(50% - 60px);
+                }
             }
             .product-lightbox-single-page & {
                 left: 0;
@@ -53,6 +56,9 @@
             right: calc(50% - 60px);
             .testimonials-slider-wrapper & {
                 right: calc(45% - 60px);
+                @include max-mq ($sm) {
+                    right: calc(50% - 60px);
+                }
             }
             .product-lightbox-single-page & {
                 right: 0;

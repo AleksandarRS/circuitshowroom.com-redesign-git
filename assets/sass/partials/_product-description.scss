@@ -2,10 +2,17 @@
     background-color: $white;
     padding-bottom: 35px;
     padding-top: 35px;
+    @include max-mq ($ls) {
+        padding-bottom: 25px;
+        padding-top: 25px;
+    }
     .product-description-inner {
         max-width: 80%;
         @include min-mq ($mac) {
             max-width: 60%;
+        }
+        @include max-mq ($mb) {
+            max-width: 100%;
         }
     }
 }

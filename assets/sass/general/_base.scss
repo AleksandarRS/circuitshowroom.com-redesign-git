@@ -31,12 +31,19 @@ blockquote,
 q {
   quotes: '' '';
   font-family: $primary-font !important;
-  font-size: $font-size-large + 0.0825;
-  font-weight: $font-weight-m;
-  position: relative;
-  padding: 55px;
   background-repeat: no-repeat;
   background-size: cover;
+  font-size: $font-size-large + 0.0825;
+  font-weight: $font-weight-m;
+  margin-bottom: 2.5em;
+  margin-top: 1.5em;
+  padding: 35px 40px;
+  position: relative;
+  @include min-mq ($mac) {
+    padding: 46px 49px;
+    margin-bottom: 4.1em;
+    margin-top: 2.3em;
+  }
   span {
     position: relative;
     z-index: 1;
@@ -45,7 +52,7 @@ q {
     position: absolute;
     top: 0;
     margin: auto !important;
-    left: 20px;
+    left: 50px;
     bottom: 0;
     z-index: 0;
   }

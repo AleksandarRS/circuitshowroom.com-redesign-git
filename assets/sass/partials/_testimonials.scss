@@ -1,21 +1,27 @@
 .testimonials-section {
     position: relative;
     .testimonials-bg-cover {
-        width: 100%;
-        position: absolute;
-        left: 0;
-        right: 0;
         bottom: 0;
+        height: 150%;
+        left: 0;
+        position: absolute;
+        right: 0;
+        width: 100%;
+        overflow: hidden;
         z-index: -9999;
-        img {
-            width: 100%;
-        }
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 }
 .testimonials-section-inner {
     padding-bottom: 80px;
+    padding-left: 15px;
+    padding-right: 15px;
     padding-top: 64px;
     position: relative;
+    @include max-mq ($sm) {
+        padding-right: 0;
+    }
 }   
 .review-slider-section-inner {
     background-color: $tertiary-color;
@@ -33,12 +39,39 @@
     padding-top: 35px;
     transform: translate(-10%);
     width: 112%;
+    @include max-mq ($sm) {
+        transform: translate(0);
+        width: 100%;
+    }
 }
 .review-slider-item {
     padding-left: 15px;
     padding-right: 15px;
     max-width: 500px;
     height: 100%;
+    @include max-mq ($boot_bp + 140) {
+        max-width: 400px;
+    }
+    @include max-mq ($mac) {
+        max-width: 350px;
+    }
+    @include max-mq ($ls) {
+        max-width: 385px;
+    }
+    @include max-mq ($tab) {
+        max-width: 315px;
+    }
+    @include max-mq ($sm + 10) {
+        max-width: 305px;
+    }
+    @include max-mq ($mb + 100) {
+        max-width: 350px;
+    }
+    @include max-mq ($ip) {
+        max-width: 300px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
     .review-slider-item-inner {
         background-color: $white;
         border-radius: 10px;
@@ -61,25 +94,22 @@
         position: absolute;
         justify-content: space-between;
         width: calc(100% - 58px);
+        @include max-mq ($tab) {
+            display: block;
+        }
     }
     .review-author {
         display: flex;
         align-items: center;
-        // .author-image {
-        //     flex: 0 0 40px;
-        //     max-width: 40px;
-        //     img {
-        //         border-radius: 50%;
-        //         display: block;
-        //         width: 100%;
-        //     }
-        // }
         .author-name {
             color: $secondary-color;
             display: inline-block;
             font-size: $font-size-xlarge + 0.125;
             font-weight: $font-weight-m;
             margin-left: 0;
+            @include max-mq ($md) {
+                font-size: $font-size-large;
+            }
         }
         
     }

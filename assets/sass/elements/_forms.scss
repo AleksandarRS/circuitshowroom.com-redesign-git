@@ -27,6 +27,9 @@ textarea {
   margin-bottom: 16px;
   padding: 5px 18px;
   vertical-align: middle;
+  @include max-mq ($ip) {
+    padding: 5px 10px;
+  }
   .qty-number-of-items & {
     background-color: $grey-100;
     border-color: $grey-100;

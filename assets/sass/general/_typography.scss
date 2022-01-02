@@ -20,10 +20,10 @@ body.page-body {
 			font-size: $font-size-h1 - 0.5;
 		}
 		@include max-mq ($ls) {
-			font-size: $font-size-h1 - 0.8;
+			font-size: $font-size-h1 - 1;
 		}
 		@include max-mq ($tab) {
-			font-size: $font-size-h1 - 0.8;
+			font-size: $font-size-h1 - 1.2;
 		}
 		@include max-mq ($mb - 20) {
 			font-size: $font-size-h1 - 1.5;

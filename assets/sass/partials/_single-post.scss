@@ -1,8 +1,27 @@
 .single-page-blog-post {
+    padding-top: 13px;
+    @include max-mq ($md) {
+        padding-top: 0;
+    }
     .title {
         &.main-title {
             font-size: $font-size-h2;
             font-weight: $font-weight-m;
+            @include max-mq ($ls) {
+                font-size: $font-size-h2 - 0.2;
+            }
+            @include max-mq ($tab) {
+                font-size: $font-size-h2 - 0.5;
+            }
+            @include max-mq ($mb - 20) {
+                font-size: $font-size-h2 - 0.8;
+            }
+            @include max-mq ($ip) {
+                font-size: $font-size-h2 - 1.2;
+            }
+            @include max-mq ($xs) {
+                font-size: $font-size-h2 - 1.35;
+            }
         }
     }
     h2 {
@@ -10,7 +29,7 @@
     }
     h3 {
         font-size: $font-size-h4;
-        margin-top: 1.8em;
+        margin-top: 2em;
     }
 
     

@@ -1,15 +1,41 @@
 .sidebar-tpl-row {
     padding-bottom: 25px;
+    > .main-content-sidebar-tpl {
+        @include min-max-mq($md, $ls) {
+            flex: 0 0 71%;
+            max-width: 71%;
+        }
+    }
 }
+.sidebar-content-sidebar-tpl {
+    > div {
+        @include max-mq($lg) {
+            width: calc(100% + 45px);
+        }
+        @include max-mq($lg - 100) {
+            width: calc(100% + 25px);
+        }
+        @include max-mq($md) {
+            width: 100%;
+        }
+    }
+}
+
 .sidebar-cta-product {
     padding-bottom: 45px;
     padding-top: 45px;
     .products-item {
+        border: 1px solid $grey-400;
+        border-radius: 5px;
         margin-left: -35px;
         width: calc(100% + 35px);
         @include min-mq ($mac) {
             margin-left: -68px;
             width: calc(100% + 68px);
+        }
+        @include max-mq ($md) {
+            margin-left: 0;
+            width: 100%;
         }
         a {
             position: relative;
@@ -26,9 +52,16 @@
             right: 25px;
         }
     }
+    div.products-item-image {
+        background-size: contain;
+        @include min-max-mq($md, $lg) {
+            min-height: 235px;
+        }
+    }
     .products-item-inner {
         > a {
             background-color: $grey-100;
+            border-radius: 5px 5px 0 0;
         }
     }
 }
@@ -39,6 +72,17 @@
     padding-top: 83px;
     @include min-mq ($mac) {
         padding-left: 10px;
+    }
+    @include max-mq ($lg) {
+        padding-top: 33px;
+    }
+    @include max-mq ($md) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    @include max-mq ($mb) {
+        padding-left: 20px;
+        padding-right: 20px;
     }
     &:after {
         content: '';
@@ -52,6 +96,9 @@
         @include min-mq ($mac) {
             left: -68px;
         }
+        @include max-mq ($md) {
+            display: none;
+        }
     }
     aside {
         position: relative;
@@ -61,6 +108,9 @@
     .widget-title {
         font-size: 2rem;
         margin-bottom: 0.5em;
+        @include max-mq ($ipad) {
+            font-size: 1.75em;
+        }
     }
     .categories-list-item {
         background-color: $white;

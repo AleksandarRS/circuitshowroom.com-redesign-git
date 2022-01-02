@@ -18,6 +18,10 @@ footer.site-footer {
     .site-footer-container {
         padding-bottom: 59px;
         padding-top: 78px;
+        @include max-mq ($sm) {
+            padding-bottom: 38px;
+            padding-top: 41px;
+        }
     }
     .widget-title {
         font-size: $font-size-base;
@@ -57,6 +61,10 @@ footer.site-footer {
             border-top: 1px solid $white;
             padding-bottom: 70px;
             padding-top: 81px;
+            @include max-mq ($sm) {
+                padding-bottom: 40px;
+                padding-top: 31px;
+            }
         }
         p {
             margin-bottom: 0.7em;
@@ -66,10 +74,28 @@ footer.site-footer {
         font-size: $font-size-base;
     }
     .footer-widgets-wrapper {
+        @include max-mq ($lg) {
+            flex-wrap: wrap;
+        }
         a {
             text-decoration: none;
             &:hover {
                 color: $tertiary-color !important;
+            }
+        }
+        .footer-widgets-links {
+            @include max-mq ($lg) {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+        .footer-widgets-text-description {
+            @include max-mq ($lg) {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            @include max-mq ($sm) {
+                padding-top: 31px;
             }
         }
     }
@@ -97,6 +123,20 @@ footer.site-footer {
             margin-left: auto;
             @include min-mq ($mac) {
                 max-width: 74%;
+            }
+        }
+    }
+    .footer-widgets-text-description {
+        .widget {
+            &.widget_text {
+                @include max-mq ($sm) {
+                    text-align: left;
+                }
+            }
+            &.widget_media_img {
+                @include max-mq ($sm) {
+                    text-align: left;
+                }
             }
         }
     }

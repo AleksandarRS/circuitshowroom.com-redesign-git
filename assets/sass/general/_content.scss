@@ -40,6 +40,15 @@
     padding-top: 53px;
     .inner-page & {
         padding-top: 233px;
+        @include max-mq ($md) {
+            padding-top: 193px;
+        }
+        @include max-mq ($ip) {
+            padding-top: 175px;
+        }
+    }
+    &.sidebar-tpl {
+        overflow: hidden;
     }
 }
 

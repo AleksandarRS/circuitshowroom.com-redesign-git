@@ -1,12 +1,17 @@
 .tab-nav-items {
+    border-bottom: 1px solid $grey-400;
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid $grey-400;
     margin-bottom: 2.8em;
     padding-bottom: 11px;
+    padding-left: 3px;
+    padding-right: 3px;
     > li {
         position: relative;
         @include just-after;
+        // @include max-mq ($mac) {
+            
+        // }
         &:after {
             background-color: transparent;
             bottom: -15px;
@@ -23,11 +28,27 @@
         }
         a {
             font-size: $font-size-h5;
+            @include max-mq ($boot_bp) {
+                font-size: $font-size-h5 - 0.225;
+                line-height: 1.15;
+            }
+            @include max-mq ($lg) {
+                font-size: $font-size-h5 - 0.35;
+                line-height: 1.05;
+            }
         }
     }
 }
 .tabs {
     padding-top: 13px;
+    @include max-mq ($md) {
+        display: none !important;
+    }
+}
+.mobile-accordion {
+    @include min-mq ($md) {
+        display: none !important;
+    }
 }
 .tab-content {
     position: relative;

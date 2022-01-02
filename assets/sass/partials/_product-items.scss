@@ -2,10 +2,27 @@
     background-color: $white;
     padding-top: 80px;
     padding-bottom: 80px;
+    @include max-mq ($md) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    @include max-mq ($mb) {
+        padding-top: 41px;
+        padding-bottom: 41px;
+    }
     &.products-items-section-single-page {
         background-color: $white;
         padding-bottom: 30px;
         padding-top: 0;
+        @include max-mq ($mac - 100) {
+            padding-bottom: 10px;
+        }
+        > div {
+            @include max-mq ($md) {
+                max-width: 100%;
+                width: 100%;
+            }
+        }
     }
     .products-item {
         background-color: transparent;
@@ -13,7 +30,10 @@
         margin-top: 16px;
         padding-bottom: 15px;
         &.products-item-single-page {
-            margin-top: 0
+            margin-top: 0;
+            @include max-mq ($md) {
+                text-align: left;
+            }
         }
     }
     .product-main-image {
@@ -61,7 +81,6 @@
     .products-item-single-page {
         .increase-icon-wrap {
             right: 0;
-            // top: 0;
         }
     }
     .products-item-featured-inner {
@@ -72,6 +91,12 @@
                 right: -35px;
             }
         }
+        .narrow-conatiner {
+            @include max-mq ($md) {
+                align-items: flex-start;
+            }
+        }
+
     }
     .narrow-conatiner {
         align-items: center;
@@ -80,6 +105,29 @@
         max-width: 89%;
         padding-bottom: 25px;
         padding-top: 25px;
+        @include max-mq ($md) {
+            max-width: 98%;
+        }
+        @include max-mq ($sm) {
+            flex-wrap: wrap;
+        }
+        > div {
+            @include max-mq ($sm) {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            
+        }
+    }
+    .product-description-options-content {
+        @include max-mq ($sm) {
+            order: 1;
+        }
+    }
+    .product-main-image {
+        @include max-mq ($sm) {
+            order: 0;
+        }
     }
     .products-item-details-single-page-wrap {
         .entry-header {
@@ -96,6 +144,9 @@
         }
     }
 }
+.date-cat-wrap {
+    align-items: center
+}
 
 .product-options {
     padding-top: 4px;
@@ -103,18 +154,25 @@
         font-weight: $font-weight-m;
     }
     .product-options-list {
+        // display: block;
         display: flex;
         align-items: center;
         li {
             margin-right: 10px;
             position: relative;
+            // display: inline-block;
             height: 30px;
             width: 30px;
             &:last-of-type {
                 margin-right: 0;
             }
             label {
+                height: 100%;
+                line-height: normal;
                 margin: 0;
+                input {
+                    opacity: 0;
+                }
                 &[for="red-radio"] {
                     input {
                         &:checked {
@@ -232,8 +290,19 @@
     display: flex;
     align-items: center;
     padding-top: 8px;
+    @include max-mq ($md) {
+        justify-content: center;
+    }
     .products-item-details-single-page-wrap & {
         padding-top: 0;
+        @include max-mq ($md) {
+            justify-content: flex-start;
+        }
+    }
+    .products-item-details-featured-wrap & {
+        @include max-mq ($md) {
+            justify-content: flex-start;
+        }
     }
     .new-price {
         font-size: $font-size-h4;
@@ -279,6 +348,9 @@
 .product-main-image-single-page {
     background-color: $grey-100;
     padding-top: 80px;
+    @include max-mq ($mb) {
+        padding-top: 40px;
+    }
     &:after {
         background-color: $grey-100;
         bottom: 0;
@@ -296,38 +368,35 @@
         position: relative;
         max-width: 620px;
         margin-bottom: -118px;
+        @include max-mq ($sm) {
+            margin-bottom: 5px;
+        }
         a {
             display: block;
         }
     }
-    // .best-seller-label-image {
-    //     max-width: 100px;
-    //     position: absolute;
-    //     right: 0;
-    //     top: 0;
-    //     > span {
-    //         align-items: center;
-    //         bottom: 0;
-    //         color: $white;
-    //         display: flex;
-    //         font-size: $font-size-small;
-    //         height: 100%;
-    //         justify-content: center;
-    //         left: 0;
-    //         margin: auto;
-    //         max-width: 65px;
-    //         position: absolute;
-    //         right: 0;
-    //         top: 0;
-    //         width: 100%;
-    //     }
-    // }
 }
 .best-seller-label-image {
     max-width: 100px;
     position: absolute;
     right: 0;
     top: 0;
+    @include max-mq ($md) {
+        top: auto;
+        bottom: 0;
+    }
+    @include max-mq ($sm) {
+        bottom: auto;
+        left: 0;
+        right: auto;
+        top: 0;
+    }
+    img {
+        @include max-mq ($sm) {
+            margin-bottom: 0.1em;
+            margin-top: 0.1em;
+        }
+    }
     > span {
         align-items: center;
         bottom: 0;
@@ -346,6 +415,12 @@
     }
 }
 
+.product-item-main-contnent-wrap-single-page {
+    @include max-mq ($md) {
+        flex-wrap: wrap;
+    }
+}
+
 .products-item {
     .products-item-image {
         background-position: bottom center;
@@ -353,6 +428,11 @@
         min-height: 305px;
         width: 100%;
         @include transition-all;
+    }
+    .products-item-details-featured-wrap {
+        @include max-mq ($md) {
+            text-align: left;
+        }
     }
     .products-item-details-wrap {
         &:not(.products-item-details-featured-wrap) {
@@ -363,18 +443,42 @@
         &.products-item-details-single-page-wrap {
             padding-left: 40px;
             padding-top: 52px;
-            @include min-mq ($mac) {
+            @include min-mq ($boot_bp) {
                 padding-left: 108px;
                 padding-top: 83px;
+            }
+            @include max-mq ($sm + 50) {
+                padding-bottom: 10px;
+            }
+            @include max-mq ($mb) {
+                padding-left: 0;
             }
             .best-seller-label-image {
                 max-width: 58px;
                 right: 8px;
-                top: 60px;
+                top: 75px;
+                @include max-mq ($boot_bp) {
+                    top: 15px;
+                }
+                @include max-mq ($md) {
+                    top: 0;
+                    bottom: auto;
+                }
+                @include max-mq ($sm) {
+                    bottom: auto;
+                    left: auto;
+                    right: 8px;
+                    top: 10px;
+                }
+                img {
+                    margin-bottom: 0.1em;
+                    margin-top: 0.1em;
+                }
                 span {
                     font-size: 0.625em;
                     max-width: 39px;
                 }
+                
             }
             .entry-content {
                 padding-top: 30px;
@@ -394,6 +498,18 @@
     h1.product-title {
         font-size: $font-size-h2;
         font-weight: $font-weight-m;
+        @include max-mq ($lt) {
+			font-size: $font-size-h2 - 0.5;
+		}
+		@include max-mq ($ls) {
+			font-size: $font-size-h2 - 0.8;
+		}
+		@include max-mq ($tab) {
+			font-size: $font-size-h2 - 0.95;
+		}
+		@include max-mq ($mb - 20) {
+			font-size: $font-size-h2 - 1.2;
+		}
     }
     .product-button {
         padding-top: 18px;
@@ -405,10 +521,19 @@
         display: flex;
         align-items: center;
         padding-top: 32px;
+        @include max-mq ($lg) {
+            display: block;
+        }
         .is-btn {
             max-width: 290px;
             width: 100%;
             margin: 0;
+            @include max-mq ($boot_bp) {
+                max-width: 165px;
+            }
+            @include max-mq ($lg) {
+                margin-top: 25px;
+            }
         }
     }
     .qty-plus {
@@ -433,3 +558,6 @@
     }
 }
 
+.terms-conditions-confirm-field {
+    text-align: left;
+}

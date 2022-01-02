@@ -161,10 +161,10 @@
         <div class="collapse navbar-collapse menu-header-nav" id="navbarResponsive">
           <div id="menu-block-1" class="menu-block menu-block-header_menu_front">
             <ul class="navbar-nav ml-auto sf-menu" id="top-menu">
-              <li class="menu-item menu-item-current">
+              <li class="menu-item">
                 <a href="index.html" id="link-1" class="nav-link-item">Home</a>
               </li>
-              <li class="menu-item">
+              <li class="menu-item menu-item-current">
                 <a href="#" id="link-2" class="nav-link-item nav-link-item-sub-menu">
                   Shop
                   <svg xmlns="http://www.w3.org/2000/svg" width="12" height="7" viewBox="0 0 12 7">
@@ -220,8 +220,8 @@
           <div class="col-md-12 products-item products-item-single-page">
             <div class="products-item-single-page-inner row">
               <div class="products-item-inner products-item-inner-single-page">
-                <div class="d-flex">
-                  <div class="product-lightbox-single-page product-main-image product-main-image-single-page col-md-7">
+                <div class="product-item-main-contnent-wrap-single-page d-flex">
+                  <div class="product-lightbox-single-page product-main-image product-main-image-single-page col-lg-7">
                     <div class="single-product-slider-wrap">
                       <div class="single-product-slider single-product-slider-lightbox slider-for">
                         <a href="assets/images/products/Neopodz-Earbuds-best-seller.png"
@@ -267,8 +267,8 @@
                         <img src="assets/images/product-slider/pexels-ready-made-3921805.jpg" alt="">
                       </div>
                     </div>
-                  </div> <!-- /.product-lightbox-single-page product-main-image product-main-image-single-page col-md-7 -->
-                  <div class="product-description-options-content col-md-5">
+                  </div> <!-- /.product-lightbox-single-page product-main-image product-main-image-single-page col-lg-7 -->
+                  <div class="product-description-options-content col-lg-5">
                     <div class="products-item-details-wrap products-item-details-single-page-wrap">
                       <div class="best-seller-label-image align-center">
                         <span>Best Seller</span>
@@ -381,7 +381,7 @@
                         </a>
                       </div>
                     </div> <!-- /.products-item-details-wrap -->
-                  </div> <!-- /.product-description-options-content col-md-5 -->
+                  </div> <!-- /.product-description-options-content col-lg-5 -->
                 </div>
               </div>
             </div>
@@ -471,6 +471,78 @@
             </div> <!-- END tabs-content -->
 
           </div> <!-- END tabs -->
+
+          <!-- Accordion starts -->
+          <div class="mobile-accordion">
+            <div class="acc-container">
+              <div class="acc">
+                <div class="acc-head">
+                  <p>Bluetooth 5.0 </p><i class="fa fa-angle-down" aria-hidden="true"></i>
+                </div>
+                <div class="acc-content">
+                  <div class="video-wrapper">
+                    <iframe id="mobile-projectplayer"
+                      src="https://player.vimeo.com/video/407913138?api=1&background=1&mute=0&autoplay=0" width="1060"
+                      height="600" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    <div class="video-buttons">
+                      <p class="button mobile-video-button active" id="mobile-play-button">
+                        <span class="button-icon-wrap">
+                          <i class="fa fa-play" aria-hidden="true"></i>
+                        </span>
+                      </p>
+                      <p class="button mobile-video-button" id="mobile-pause-button">
+                        <span class="button-icon-wrap">
+                          <i class="fa fa-pause" aria-hidden="true"></i>
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="acc">
+                <div class="acc-head">
+                  <p>Wireless Earbuds</p><i class="fa fa-angle-down" aria-hidden="true"></i>
+                </div>
+                <div class="acc-content">
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore magnam, nobis consequuntur nemo
+                    cupiditate vel sit ducimus quisquam quaerat.</p>
+                </div>
+              </div>
+              <div class="acc">
+                <div class="acc-head">
+                  <p>Charging Case</p><i class="fa fa-angle-down" aria-hidden="true"></i>
+                </div>
+                <div class="acc-content">
+                  <p>Lorem ipsum, dolor sit amet consectetur.</p>
+                </div>
+              </div>
+              <div class="acc">
+                <div class="acc-head">
+                  <p>IPX6 Water Resistance</p><i class="fa fa-angle-down" aria-hidden="true"></i>
+                </div>
+                <div class="acc-content">
+                  <p>Lorem ipsum, dolor sit amet consectetur.</p>
+                </div>
+              </div>
+              <div class="acc">
+                <div class="acc-head">
+                  <p>Built-In Mic</p><i class="fa fa-angle-down" aria-hidden="true"></i>
+                </div>
+                <div class="acc-content">
+                  <p>Lorem ipsum, dolor sit amet consectetur.</p>
+                </div>
+              </div>
+              <div class="acc">
+                <div class="acc-head">
+                  <p>Works on iOS and Android</p><i class="fa fa-angle-down" aria-hidden="true"></i>
+                </div>
+                <div class="acc-content">
+                  <p>Lorem ipsum, dolor sit amet consectetur.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Accordion ends -->
         </div>
       </div>
     </div> <!-- /#product-features /.product-features-section -->
@@ -478,8 +550,8 @@
 
 
     <div id="testimonials" class="testimonials-section">
-      <div class="testimonials-bg-cover">
-        <img src="assets/images/gradient-background.png" alt="">
+      <div class="testimonials-bg-cover" style="background-image: url('assets/images/gradient-background.png');">
+        
       </div>
       <div class="testimonials-section-inner">
         <div class="container">
@@ -712,7 +784,7 @@
 
           <div class="col-md-12 latest-posts-items">
             <div class="row latest-posts-items-row">
-              <div class="col-md-4 latest-posts-item">
+              <div class="col-lg-4 latest-posts-item">
                 <div class="latest-posts-item-inner">
                   <a class="post-item-link" href="#">
                     <div class="post-item-feature-image-wrap">
@@ -744,7 +816,7 @@
                   </a>
                 </div>
               </div>
-              <div class="col-md-4 latest-posts-item">
+              <div class="col-lg-4 latest-posts-item">
                 <div class="latest-posts-item-inner">
                   <a class="post-item-link" href="#">
                     <div class="post-item-feature-image-wrap">
@@ -776,7 +848,7 @@
                   </a>
                 </div>
               </div>
-              <div class="col-md-4 latest-posts-item">
+              <div class="col-lg-4 latest-posts-item">
                 <div class="latest-posts-item-inner">
                   <a class="post-item-link" href="#">
                     <div class="post-item-feature-image-wrap">

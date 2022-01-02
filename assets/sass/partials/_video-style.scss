@@ -1,5 +1,19 @@
 .video-wrapper {
     position: relative;
+    @include max-mq ($md) {
+        padding-bottom: 56%;
+    }
+    iframe {
+        @include max-mq ($md) {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+        }
+    }
     .video-buttons {
         position: absolute;
         left: 0;
@@ -12,6 +26,7 @@
         justify-content: center;
         align-items: center;
         &:hover {
+            .mobile-video-button,
             .video-button {
                 &.active {
                     opacity: 1;
@@ -19,6 +34,7 @@
             }
         }
     }
+    .mobile-video-button,
     .video-button {
         bottom: 0;
         border-radius: 50%;

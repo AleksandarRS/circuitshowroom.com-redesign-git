@@ -11,4 +11,4 @@ $('.acc-head').on('click', function() {
         $(this).siblings('.acc-content').slideToggle();
         $(this).toggleClass('active');
     }
-}); 
+});

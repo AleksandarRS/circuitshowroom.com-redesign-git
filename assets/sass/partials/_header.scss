@@ -53,8 +53,14 @@
     max-width: 155px;
     width: 100%;
     @include transition-all;
+    @include max-mq ($mb) {
+        max-width: 130px;
+    }
     .animated-header & {
         max-width: 125px;
+        @include max-mq ($mb) {
+            max-width: 105px;
+        }
     }
 }
 .main-top-header,
@@ -68,6 +74,9 @@
     border-bottom: 1px solid transparent;
     padding-top: 25px;
     @include transition-all;
+    @include max-mq ($sm) {
+        padding-top: 10px;
+    }
     .animated-header & {
         background-color: $white;
         border-color: $grey-400;
@@ -75,10 +84,17 @@
 
     }
 }
-.nav-container {
-    display: flex;
-    display: -webkit-box;
-    justify-content: space-between;
+.tel-email-location-wrap {
+    address {
+        @include max-mq ($md) {
+            display: none !important;
+        }
+    }
+    .social-items-wrap {
+        @include max-mq ($md) {
+            margin-left: auto;
+        }
+    }
 }
 .menu-header-nav {
     align-self: flex-end;

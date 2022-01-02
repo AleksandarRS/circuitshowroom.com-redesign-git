@@ -12,6 +12,10 @@
         &[type="email"] {
             max-width: 78%;
             flex: 0 0 78%;
+            @include max-mq ($mb) {
+                max-width: 60%;
+                flex: 0 0 60%;
+            }
         }
         &[type="submit"] {
             margin-left: 6px;
